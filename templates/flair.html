@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %} 
+
+{% block body %}
+
+        <body>
+        	<div class="row test">
+			<div class="col-sm-10">
+				<h1 style="text-align: center;padding-left: 20%">Flair Detector</h1> 
+			</div>
+			<div class="col-sm-2 test">
+			<div class="input-group-btn">
+			<a href=""><button type="button" class="btn btn-primary">View Source code</button></a>
+        
+      		</div>
+			</div>
+			</div>
+			<br><br><br>
+			<div class="row">
+				<div class="pred col-sm-12">
+  				<h2>Predicted Flair is&nbsp;:&nbsp;&nbsp;&nbsp;{{ flair }} </h2>
+  				<br>
+  				<div class="input-group-btn">
+			<a href="/"><button type="button" class="btn btn-default">Go back</button></a>
+        
+      		</div>
+  			</div>
+			</div>
+  			<section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
+    <div class="overlay-mf"></div>
+   
+   <footer id='social-footer'>
+
+
+        <ul>
+
+            <li class='highlight'>
+                <a class="fa-stack fa-1x" data-toggle="tooltip" title="Email" data-placement="top" href="mailto:gpnitrr@gmail.com">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x blacktext"></i>
+                </a>
+            </li>
+
+            
+
+            <li class='highlight'>
+                <a class="fa-stack fa-1x" data-toggle="tooltip" title="Linkedin" data-placement="top" href="https://www.linkedin.com/in/gaurav-patel10/" target="_blank"><i class="fa fa-linkedin-square fa-stack-2x"></i></a>
+            </li>
+
+
+
+            <li class='highlight'>
+                <a class="fa-stack fa-1x" data-toggle="tooltip" title="GitHub" data-placement="top" href="https://github.com/gaurav104" target="_blank"><i class="fa fa-github-square fa-stack-2x"></i></a>
+            </li>
+
+
+        </ul>
+
+
+
+        <div class="text-center copyright">
+          <b>© </b>
+        </div>
+
+<script type="text/javascript">
+   $(document).ready(function() {
+
+  // import view port library function
+  
+
+  
+  var currentTime = new Date();
+  var year = currentTime.getFullYear();
+
+  // turn on bootstrap tooltips
+  $('[data-toggle="tooltip"]').tooltip();
+
+  $(".copyright").append("<span> " + year + " Gaurav Patel. All rights reserved</span>");
+});
+
+
+</script>
+    </footer>
+  </section>
+			
+
+        </body>
+
+
+{% endblock %}
