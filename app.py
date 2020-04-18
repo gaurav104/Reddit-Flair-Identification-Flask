@@ -8,7 +8,6 @@ from support.process_file import process_file
 app = Flask(__name__)
 
 UPLOAD_FOLDER = "./uploads/"
-# DOWNLOAD_FOLDER = os.path.dirname(os.path.abspath(__file__)) + '/downloads/'
 ALLOWED_EXTENSIONS = {'txt'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -28,29 +27,23 @@ def index():
 @app.route('/automated_testing', methods=['POST', 'GET'])
 def testing():
     if request.method == 'POST':
-        # file = request.files['file']
-        # filename = secure_filename(file.filename)
-        # file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        # predicted_dict = process_file(os.path.join(app.config['UPLOAD_FOLDER'], filename),filename)
-        # return jsonify(predicted_dict)
 
-        if 'file' not in request.files:
-            print('No file attached in request')
-            return redirect(request.url)
-        file = request.files['file']
+        try:
+            file = request.files['file']
+        except KeyError:
+            return jsonify(message = "Please make sure the key value is 'file' of the files parameter in the POST request")
+
+
         if file.filename == '':
-            print('No file selected')
-            return redirect(request.url)
+            return jsonify(message = "No file detect")
+
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             predicted_dict = process_file(os.path.join(app.config['UPLOAD_FOLDER'], filename),filename)
             return jsonify(predicted_dict)
-    # return render_template('testing.html')
-
-# @app.route('/automated_testing/<filename>')
-# def get_file(filename):
-#     return send_from_directory(app.config['UPLOAD_FOLDER'], filename, as_attachment=True)
+        else:
+            return jsonify(message = 'Please make sure the request is made with a .txt file')
 
 if __name__ == "__main__":
-        app.run(debug=True)
+    app.run(debug=True)

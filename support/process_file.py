@@ -26,3 +26,20 @@ def process_file(upload_path, filename):
 	# filename = modify_ext(filename, ".json")
 	return predictions
 
+# def process_file(file):
+# 	predictions = {}
+# 	with open(file, 'r') as fp:
+# 		lines = fp.readlines()
+# 		for line in lines:
+# 			url = line.strip()
+# 			pred_label = predict_flair(url)
+# 			predictions[url] = pred_label
+	
+# 	# json_file_path = modify_ext(upload_path, '.json')
+
+
+# 	# with open(json_file_path, 'w') as js:
+# 	# 	json.dump(predictions, js)
+
+# 	# filename = modify_ext(filename, ".json")
+# 	return predictions
