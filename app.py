@@ -35,7 +35,7 @@ def testing():
 
 
         if file.filename == '':
-            return jsonify(message = "No file detect")
+            return jsonify(message = "No file detected")
 
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
