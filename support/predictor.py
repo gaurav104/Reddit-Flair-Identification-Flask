@@ -22,7 +22,7 @@ def js_r(filename):
 
 
 def predict_flair(inp_url):
-    model = load('./model/model.joblib')
+    model = load('./model/model_svc.joblib')
 
 
     credentials = js_r("./support/config.json")
