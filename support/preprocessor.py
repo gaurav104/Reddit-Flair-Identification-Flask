@@ -6,7 +6,6 @@ import contractions
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords, wordnet
 from nltk.stem import WordNetLemmatizer
-#contractions_dict
 
 
 wnl  = WordNetLemmatizer()

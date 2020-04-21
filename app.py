@@ -7,7 +7,12 @@ from support.process_file import process_file
 
 app = Flask(__name__)
 
+
+
 UPLOAD_FOLDER = "./uploads/"
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
+
 ALLOWED_EXTENSIONS = {'txt'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -31,11 +36,11 @@ def testing():
         try:
             file = request.files['file']
         except KeyError:
-            return jsonify(message = "Please make sure the key value is 'file' of the files parameter in the POST request")
+            return jsonify(status = 'error', message = "Please make sure the key value is 'file' of the files parameter in the POST request")
 
 
         if file.filename == '':
-            return jsonify(message = "No file detected")
+            return jsonify(status = 'error', message = "No file detected")
 
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
@@ -43,7 +48,7 @@ def testing():
             predicted_dict = process_file(os.path.join(app.config['UPLOAD_FOLDER'], filename),filename)
             return jsonify(predicted_dict)
         else:
-            return jsonify(message = 'Please make sure the request is made with a .txt file')
+            return jsonify(status = 'error', message = 'Please make sure the request is made with a .txt file')
 
 if __name__ == "__main__":
     app.run(debug=True)
