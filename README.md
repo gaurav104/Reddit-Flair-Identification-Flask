@@ -1,7 +1,7 @@
 # Reddit Flair Identification
 
 A flask app for flair Identification for [r/india](https://www.reddit.com/r/india/) subreddit, which takes a r/india posts' URL and predicts the flair of the post.
- The web-application is hosted on Heroku at [Link to be entered)](https://www.google.com/).
+ The web-application is hosted on Heroku at [https://redditflairid.herokuapp.com/)](https://redditflairid.herokuapp.com/).
  
  Python packages used
 - Scikit-learn
