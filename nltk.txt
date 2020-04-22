@@ -1,1 +1,4 @@
-all
+averaged_perceptron_tagger
+wordnet
+phunkt
+stopwords
