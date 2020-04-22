@@ -10,9 +10,9 @@ A flask app for flair Identification for [r/india](https://www.reddit.com/r/indi
 - Numpy
 - Pandas
 - Flask
-
-
-
+ ```
+The requirements.txt file contains all the dependencies used in the notebook and for developing the flask app. 
+```
 ## Directory Structure
 
 - [model](link): Contains the trained ML model which makes the prediction
