@@ -4,12 +4,12 @@ A flask app for flair Identification for [r/india](https://www.reddit.com/r/indi
  The web-application is hosted on Heroku at [https://redditflairid.herokuapp.com/)](https://redditflairid.herokuapp.com/).
  
  Python packages used
-- Scikit-learn
 - PRAW
+- Scikit-learn
 - NLTK
-- Flask
 - Numpy
 - Pandas
+- Flask
 
 
 
