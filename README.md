@@ -3,7 +3,7 @@
    ![App home page screenshot](https://i.imgur.com/e2XitzD.png)
 
 A flask app for flair Identification for [r/india](https://www.reddit.com/r/india/) subreddit, which takes a r/india posts' URL and predicts the flair of the post.
- The web-application is hosted on Heroku at [https://redditflairid.herokuapp.com/)](https://redditflairid.herokuapp.com/).
+ The web-application is hosted on Heroku at [https://redditflairid.herokuapp.com/](https://redditflairid.herokuapp.com/).
  
  Python packages used
 - PRAW
