@@ -33,19 +33,19 @@ The web-application allows the user to enter a r/india URL and displays the pred
 To run on a local server:
 1. Clone the repository
 ```
-git clone "git url"
+git clone https://github.com/gaurav104/Reddit-Flair-Identification-Flask.git
 ```
 2. Create a virtual environment
 ```
 python3 -m venv flair_detector
 source flair_detector/bin/activate
-cd <repository name>/
+cd Reddit-Flair-Identification-Flask/
 ```
-3. Finally, install the project dependencies
+3. Install the project dependencies
 ```
 pip3 install -r requirements.txt
 ```
-4. To run the server, execute the following command
+4. To run the server locally, execute the following command
 ```
 python3 app.py
 ```
@@ -60,11 +60,12 @@ In the notebook folder
  - [EDA.ipynb](link): In this notebook, Exploratory Data Analysis is performed on the cleaned data, we look for average post lengths and words present, perform topic modelling using LDA(Latent Dirichlet Allocation) and NMF(Non-negative Matrix Factorization).
  
  - [Classification.ipynb](link): Performing classification on the pre-processes data and performing model evaluation and analysis on the predicted and actual labels
+ 
+ notebooks to be added soon
 
 
 
-## Future Extension
+## Future Additions
 1. Improving the prediction by automatic model parameter update, by training on post from r/india.
 2. Incorporating DL models, LSTMs/GRUs, Bert.
 
-## References
