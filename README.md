@@ -17,7 +17,7 @@ A flask app for flair Identification for [r/india](https://www.reddit.com/r/indi
 
 - [model](link): Contains the trained ML model which makes the prediction
 -  [notebooks](link): containes jupyter notebooks of data scrapping, preprocessing, EDA and classification
-- [static](link): Contains the [main.css](link) file, used as a of frontend.
+- [static](link): Contains the [main.css](link) file, used as for frontend.
 - [support](link): Contains the scripts for prediction and preprocessing of the text data and config.json.
 - [templates](link): Contains HTML files for the web-application
 - [app.py](link): File to run to start the web application
