@@ -13,9 +13,10 @@ def process_file(upload_path, filename):
 	with open(upload_path, 'r') as fp:
 		lines = fp.readlines()
 		for line in lines:
-			url = line.strip()
-			pred_label = predict_flair(url)
-			predictions[url] = pred_label
+			if line.strip():
+				url = line.strip()
+				pred_label = predict_flair(url)
+				predictions[url] = pred_label
 	return predictions
 
 
