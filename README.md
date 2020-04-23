@@ -63,9 +63,6 @@ In the notebook folder
  
  - [Classification.ipynb](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/blob/master/notebooks/Classification.ipynb): Performing classification on the pre-processed data, evaluating model's performance, and analysis on the predicted and actual labels.
  
- notebooks to be added soon.
-
-
 
 ## Future Additions
 1. Improving the prediction by automatic model parameter update, by training on post from r/india.
