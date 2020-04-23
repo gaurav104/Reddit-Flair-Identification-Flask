@@ -17,13 +17,13 @@ The requirements.txt file contains all the dependencies used in the notebook and
 ```
 ## Directory Structure
 
-- [model](link): Contains the trained ML model which makes the prediction.
--  [notebooks](link): containes ipynb notebooks of data scrapping, preprocessing, EDA and classification.
-- [static](link): Contains the [main.css](link) file, used as for frontend.
-- [support](link): Contains the scripts for prediction and preprocessing of the text data and config.json.
-- [templates](link): Contains HTML files for the web-application.
-- [app.py](link): File to run to start the web application.
-- [requirements.txt](link): dependendancies.
+- [model](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/tree/master/model): Contains the trained ML model which makes the prediction.
+-  [notebooks](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/tree/master/notebooks): containes ipynb notebooks of data scrapping, preprocessing, EDA and classification.
+- [static](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/tree/master/static): Contains the [main.css](link) file, used as for frontend.
+- [support](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/tree/master/support): Contains the scripts for prediction and preprocessing of the text data and config.json.
+- [templates](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/tree/master/templates): Contains HTML files for the web-application.
+- [app.py](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/blob/master/app.py): File to run to start the web application.
+- [requirements.txt](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/blob/master/requirements.txt): dependendancies.
  ```
 Edit "config.json" and add in your PRAW credentials
 ```
@@ -55,13 +55,13 @@ python3 app.py
 ## Approach 
 In the notebook folder
 
- - [Data Scraping.pynb](link%20dalna%20hai): Depicts the data scrapping process using Pushshift and praw API.
+ - [Data Scraping.pynb](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/blob/master/notebooks/Data%20Scrapping.ipynb): Depicts the data scrapping process using Pushshift and praw API.
  
- - [Text Preprocessing.ipynb](link): This notebook describes the data cleaing and the preprocessing, which include steps such as punctuation removal, stopword removal, lemmatization, tokenization, etc.
+ - [Text Preprocessing.ipynb](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/blob/master/notebooks/Text%20Preprocessing.ipynb): This notebook describes the data cleaing and the preprocessing, which include steps such as punctuation removal, stopword removal, lemmatization, tokenization, etc.
  
- - [EDA.ipynb](link): In this notebook, Exploratory Data Analysis is performed on the cleaned data, we look for average post lengths and number of words present, perform topic modelling using LDA(Latent Dirichlet Allocation) and NMF(Non-negative Matrix Factorization), etc.
+ - [EDA.ipynb](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/blob/master/notebooks/EDA.ipynb): In this notebook, Exploratory Data Analysis is performed on the cleaned data, we look for average post lengths and number of words present, perform topic modelling using LDA(Latent Dirichlet Allocation) and NMF(Non-negative Matrix Factorization), etc.
  
- - [Classification.ipynb](link): Performing classification on the pre-processed data, evaluating model's performance, and analysis on the predicted and actual labels.
+ - [Classification.ipynb](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/blob/master/notebooks/Classification.ipynb): Performing classification on the pre-processed data, evaluating model's performance, and analysis on the predicted and actual labels.
  
  notebooks to be added soon.
 
