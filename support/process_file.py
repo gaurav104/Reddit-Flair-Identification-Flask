@@ -13,5 +13,5 @@ def process_file(file):
 		if line.strip():
 			url = line.strip()
 			pred_label = predict_flair(url)
-			predictions[url] = pred_label
+			predictions[url] = pred_label['label']
 	return predictions

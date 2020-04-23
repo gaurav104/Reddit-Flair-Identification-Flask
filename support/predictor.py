@@ -52,4 +52,4 @@ def predict_flair(inp_url):
     class_id = int(pred)
     label = id_to_label[class_id]
 
-    return {'text': 'Predicted Flair is : {}'.format(label), 'error_flag': 0}
+    return {'text': 'Predicted Flair is : {}'.format(label), 'error_flag': 0 , 'label': label}
