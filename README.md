@@ -19,7 +19,7 @@ The requirements.txt file contains all the dependencies used in the notebook and
 
 - [model](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/tree/master/model): Contains the trained ML model which makes the prediction.
 -  [notebooks](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/tree/master/notebooks): containes ipynb notebooks of data scrapping, preprocessing, EDA and classification.
-- [static](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/tree/master/static): Contains the [main.css](link) file, used as for frontend.
+- [static](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/tree/master/static): Contains the [main.css](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/tree/master/static/css) file, used as for frontend.
 - [support](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/tree/master/support): Contains the scripts for prediction and preprocessing of the text data and config.json.
 - [templates](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/tree/master/templates): Contains HTML files for the web-application.
 - [app.py](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/blob/master/app.py): File to run to start the web application.
