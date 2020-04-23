@@ -29,13 +29,9 @@ def predict_flair(inp_url):
 
     reddit = praw.Reddit(client_id=credentials['client_id'], client_secret=credentials['client_secret'], password=credentials["password"], user_agent=credentials["user_agent"], username=credentials["username"])
 
-    try:
-        post = reddit.submission(url=inp_url)
-    except:
-        return 'invalid_url'
+    post = reddit.submission(url=inp_url)
 
-
-    actual_flair = post.link_flair_text
+    # actual_flair = post.link_flair_text
     X = {"title": [], "selftext": []}
     
 

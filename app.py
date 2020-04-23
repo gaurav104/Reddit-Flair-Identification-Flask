@@ -34,18 +34,18 @@ def testing():
     if request.method == 'POST':
 
         try:
-            file = request.files['file']
+            file = request.files['upload_file']
         except KeyError:
-            return jsonify(status = 'error', message = "Please make sure the key value is 'file' of the files parameter in the POST request")
+            return jsonify(status = 'error', message = "Please make sure the key value is 'upload_file' of the files parameter in the POST request")
 
 
         if file.filename == '':
             return jsonify(status = 'error', message = "No file detected")
 
         if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            predicted_dict = process_file(os.path.join(app.config['UPLOAD_FOLDER'], filename),filename)
+            # filename = secure_filename(file.filename)
+            # file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            predicted_dict = process_file(file)
             return jsonify(predicted_dict)
         else:
             return jsonify(status = 'error', message = 'Please make sure the request is made with a .txt file')
