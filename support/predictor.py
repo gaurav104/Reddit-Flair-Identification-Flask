@@ -25,6 +25,7 @@ def js_r(filename):
 
 
 def predict_flair(inp_url):
+    error_flag=0
     model = load('./model/model_svc.joblib')
 
 
@@ -32,7 +33,11 @@ def predict_flair(inp_url):
 
     reddit = praw.Reddit(client_id=credentials['client_id'], client_secret=credentials['client_secret'], password=credentials["password"], user_agent=credentials["user_agent"], username=credentials["username"])
 
-    post = reddit.submission(url=inp_url)
+    try:
+        post = reddit.submission(url=inp_url)
+    except:
+        return {'text':"Please Check the URL Entered", 'error_flag': 1}
+
 
     X = {"title": [], "selftext": []}
 
@@ -47,4 +52,4 @@ def predict_flair(inp_url):
     class_id = int(pred)
     label = id_to_label[class_id]
 
-    return label
+    return {'text': 'Predicted Flair is : {}'.format(label), 'error_flag': 0}

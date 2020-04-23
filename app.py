@@ -18,8 +18,11 @@ def allowed_file(filename):
 def index():
     if request.method == 'POST':
         reddit_url = request.form['content']
-        detected_flair = predict_flair(reddit_url)
-        return render_template("flair.html", flair = detected_flair)
+        prediction = predict_flair(reddit_url)
+        if prediction['error_flag']:
+            return render_template("flair.html", text = prediction['text'])
+        else:
+            return render_template("flair.html", text = prediction['text'])
     else:
         return render_template("index.html")
 
