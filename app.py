@@ -1,6 +1,5 @@
 import os
-from flask import Flask, render_template, request, redirect, url_for, send_from_directory, jsonify
-from werkzeug.utils import secure_filename
+from flask import Flask, render_template, request, jsonify
 from support.predictor import predict_flair
 from support.process_file import process_file
 
