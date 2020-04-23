@@ -12,7 +12,10 @@ label_to_id = {"Business/Finance" : 0,
 "Sports" : 5,
 "Photography" : 6,
 "Politics" : 7,
-"AskIndia" : 8}
+"AskIndia" : 8,
+'CAA-NRC' : 9,
+'Coronavirus' : 10,                         
+}
 
 id_to_label = {v: k for k, v in label_to_id.items()}
 
@@ -31,9 +34,7 @@ def predict_flair(inp_url):
 
     post = reddit.submission(url=inp_url)
 
-    # actual_flair = post.link_flair_text
     X = {"title": [], "selftext": []}
-    
 
     X['title'].append(post.title)
     X['selftext'].append(post.selftext)

@@ -8,14 +8,8 @@ from support.process_file import process_file
 app = Flask(__name__)
 
 
-
-UPLOAD_FOLDER = "./uploads/"
-if not os.path.exists(UPLOAD_FOLDER):
-    os.makedirs(UPLOAD_FOLDER)
-
 ALLOWED_EXTENSIONS = {'txt'}
 
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -43,8 +37,6 @@ def testing():
             return jsonify(status = 'error', message = "No file detected")
 
         if file and allowed_file(file.filename):
-            # filename = secure_filename(file.filename)
-            # file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             predicted_dict = process_file(file)
             return jsonify(predicted_dict)
         else:
