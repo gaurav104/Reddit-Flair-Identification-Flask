@@ -23,7 +23,6 @@ def js_r(filename):
     with open(filename) as f_in:
         return(json.load(f_in))
 
-
 def predict_flair(inp_url):
 
     model = load('./model/model_svc.joblib')

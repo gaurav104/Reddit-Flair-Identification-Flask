@@ -3,12 +3,9 @@ from flask import Flask, render_template, request, jsonify
 from support.predictor import predict_flair
 from support.process_file import process_file
 
-
 app = Flask(__name__)
 
-
 ALLOWED_EXTENSIONS = {'txt'}
-
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS

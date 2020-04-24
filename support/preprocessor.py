@@ -21,7 +21,6 @@ def get_wordnet_pos(tag):
     else:
         return wordnet.NOUN
 
-
 def remove_URLs(x):
     return re.compile(r'https?:\/\/\S+').sub(" ", x) 
 
@@ -47,13 +46,11 @@ def lemmatize(x):
     x = [(word, get_wordnet_pos(pos_tag)) for (word, pos_tag) in x]
     return [wnl.lemmatize(word, tag) for word, tag in x]
 
-
 def remove_smallwords(x):
     return [t for t in x if len(t) > 2]
 
 def tok_string(x):
     return " ".join(map(str, x))
-
 
 def normalizeString(s):
     s = s.lower().strip()
