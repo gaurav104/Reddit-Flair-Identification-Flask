@@ -18,10 +18,7 @@ def index():
     if request.method == 'POST':
         reddit_url = request.form['content']
         prediction = predict_flair(reddit_url)
-        if prediction['error_flag']:
-            return render_template("flair.html", text = prediction['text'])
-        else:
-            return render_template("flair.html", text = prediction['text'])
+        return render_template("flair.html", text = prediction['text'])
     else:
         return render_template("index.html")
 
@@ -33,8 +30,7 @@ def testing():
             file = request.files['upload_file']
         except KeyError:
             return jsonify(status = 'error', message = "Please make sure the key value is 'upload_file' of the files parameter in the POST request")
-
-
+       
         if file.filename == '':
             return jsonify(status = 'error', message = "No file detected")
 
