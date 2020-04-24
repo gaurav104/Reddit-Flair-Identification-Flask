@@ -55,11 +55,11 @@ python3 app.py
 ## Approach 
 In the notebook folder
 
- - [Data Scraping.pynb](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/blob/master/notebooks/Data%20Scrapping.ipynb): Depicts the data scrapping process using Pushshift and praw API.
+ - [Data Scraping.pynb](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/blob/master/notebooks/Data%20Scrapping.ipynb): Depicts the data scrapping process using Pushshift.
  
- - [Text Preprocessing.ipynb](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/blob/master/notebooks/Text%20Preprocessing.ipynb): This notebook describes the data cleaing and the preprocessing, which include steps such as punctuation removal, stopword removal, lemmatization, tokenization, etc.
+ - [Text Preprocessing.ipynb](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/blob/master/notebooks/Text%20Preprocessing.ipynb): This notebook describes the data cleaning and the preprocessing, which include steps such as punctuation removal, stopword removal, lemmatization, tokenization, etc.
  
- - [EDA.ipynb](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/blob/master/notebooks/EDA.ipynb): In this notebook, Exploratory Data Analysis is performed on the cleaned data, we look for average post lengths and number of words present, perform topic modelling using LDA(Latent Dirichlet Allocation) and NMF(Non-negative Matrix Factorization), etc.
+ - [EDA.ipynb](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/blob/master/notebooks/EDA.ipynb): In this notebook, an Exploratory Data Analysis is performed on the cleaned data, we look for average post lengths and number of words present, perform topic modelling using LDA(Latent Dirichlet Allocation) and NMF(Non-negative Matrix Factorization), etc.
  
  - [Classification.ipynb](https://github.com/gaurav104/Reddit-Flair-Identification-Flask/blob/master/notebooks/Classification.ipynb): Performing classification on the pre-processed data, evaluating model's performance, and analysis on the predicted and actual labels.
  
